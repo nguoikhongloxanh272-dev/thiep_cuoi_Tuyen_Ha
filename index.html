@@ -1,0 +1,292 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thiệp cưới Tuyến & Hà</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="opening-screen" id="openingScreen" aria-label="Màn mở thiệp cưới">
+    <div class="opening-card">
+      <div class="opening-envelope" aria-hidden="true">
+        <div class="envelope-flap"></div>
+        <div class="envelope-body">♥</div>
+      </div>
+      <p class="opening-small">Trân trọng kính mời</p>
+      <h2>Đình Tuyến & Lệ Hà</h2>
+      <p class="opening-date">08.08.2026</p>
+      <button class="open-invitation" id="openInvitation" type="button">Mở thiệp</button>
+    </div>
+  </div>
+  <!--
+    CÁCH THAY ẢNH:
+    1. Mở thư mục assets.
+    2. Thay ảnh của bạn vào đúng tên file đang dùng: hero-couple.png, bride.png, groom.png...
+    3. Nếu muốn dùng tên khác, sửa đường dẫn trong thuộc tính src của các thẻ <img>.
+  -->
+
+  <main class="wedding-card">
+    <button class="music-button" type="button" aria-label="Bật hoặc tắt nhạc" title="Bật/tắt nhạc">
+      <span>♪</span>
+    </button>
+
+    <!-- Nếu có nhạc, đặt file vào assets/music.mp3 rồi bỏ dấu comment dòng audio dưới đây. -->
+    <audio id="weddingMusic" src="assets/music.mp3" loop></audio>
+
+    <section class="hero-section" id="top">
+      <p class="eyebrow">Save The Date</p>
+      <p class="wedding-date">08.08.2026</p>
+      <h1 class="hero-names" aria-label="Đình Tuyến và Lệ Hà">
+        <span class="name-part name-groom">Đình Tuyến</span>
+        <span class="name-amp">&</span>
+        <span class="name-part name-bride">Lệ Hà</span>
+      </h1>
+      <img class="hero-photo" src="image/anh13.3.jpg" alt="Ảnh cô dâu chú rể" loading="lazy" />
+      <div class="ticket-title">Wedding Invitation</div>
+    </section>
+
+    <section class="couple-section paper-section">
+      <div class="family-grid">
+        <article>
+          <h2>Nhà trai</h2>
+          <p>Ông Nguyễn Đình Nam</p>
+          <p>Bà Hồ Thị Ngọc</p>
+          <img src="image/anh22.1.jpg" alt="Ảnh chú rể" loading="lazy" />
+          <h3>Nguyễn Đình Tuyến</h3>
+        </article>
+
+        <article>
+          <h2>Nhà gái</h2>
+          <!-- <p>Ông Trịnh Văn Huy</p> -->
+          <p>Bà Lê Thị Thủy</p>
+          <p>&nbsp;</p>
+
+          <img src="image/anh20.1.jpg" alt="Ảnh cô dâu" loading="lazy" />
+          <h3>Nguyễn Thị Lệ Hà</h3>
+        </article>
+      </div>
+
+      <div class="countdown" aria-label="Đếm ngược đến ngày cưới">
+        <div><strong id="days">0</strong><span>ngày</span></div>
+        <div><strong id="hours">0</strong><span>giờ</span></div>
+        <div><strong id="minutes">0</strong><span>phút</span></div>
+        <div><strong id="seconds">0</strong><span>giây</span></div>
+      </div>
+    </section>
+
+    <section class="invitation-section paper-section decorated">
+      <h2>Trân Trọng Kính Mời</h2>
+      <div class="photo-row">
+        <img src="image/anh20.jpg" alt="Ảnh cưới 1" loading="lazy" />
+        <img src="image/anh4.jpg" alt="Ảnh cưới 2" loading="lazy" />
+        <img src="image/anh19.jpg" alt="Ảnh cưới 3" loading="lazy" />
+      </div>
+
+      <p class="formal-text">THAM DỰ TIỆC MỪNG LỄ THÀNH HÔN</p>
+      <p class="time-label">Vào lúc</p>
+
+      <div class="date-strip" aria-label="Thời gian tổ chức lễ cưới">
+        <div>10:00</div>
+        <div class="date-center">
+          <span>Thứ Bảy</span>
+          <strong>08</strong>
+          <span>Tháng 08</span>
+        </div>
+        <div>2026</div>
+      </div>
+
+      <div class="calendar-card" aria-label="Lịch tháng 08 năm 2026">
+        <div class="calendar-title">08.2026</div>
+        <div class="calendar-grid calendar-weekdays">
+          <span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span><span>SUN</span>
+        </div>
+        <div class="calendar-grid calendar-days">
+          <span></span><span></span><span></span><span></span><span></span><span>1</span><span>2</span>
+          <span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span
+            class="active-day">8</span><span>9</span>
+          <span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span>
+          <span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span>
+          <span>24</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span>
+          <span>31</span><span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="calendar-watermark">2026</div>
+      </div>
+
+      <!-- <p class="venue">Nhà văn hóa xóm Bắc Sơn<br />(xóm 2)</p> -->
+    </section>
+
+    <section class="map-section paper-section decorated">
+      <h2>Địa Điểm Tổ Chức</h2>
+      <p class="venue">Nhà văn hóa xóm Bắc Sơn<br />(xóm 2, Nghi Vạn, Nghi Lộc, Nghệ An)</p>
+      <a class="map-link" href="https://maps.google.com" target="_blank" rel="noreferrer">
+        <img src="assets/anhDiaChi.png" alt="Bản đồ địa điểm tổ chức" loading="lazy" />
+      </a>
+    </section>
+
+    <section class="rsvp-section paper-section decorated">
+      <h2>Xác nhận tham dự</h2>
+      <div class="double-happiness">囍</div>
+
+      <!-- Form giữ nguyên cấu trúc của bạn -->
+      <form class="rsvp-form" id="rsvpForm">
+        <label for="guestName">Họ và tên</label>
+        <input id="guestName" name="guestName" type="text" placeholder="Nhập tên của bạn" required />
+
+        <p>Bạn sẽ tham dự chứ?</p>
+        <label class="radio-line">
+          <input type="radio" name="attendance" value="Có, tôi sẽ tham dự" checked />
+          Có, tôi sẽ tham dự
+        </label>
+        <label class="radio-line">
+          <input type="radio" name="attendance" value="Tôi bận, rất tiếc không thể tham dự" />
+          Tôi bận, rất tiếc không thể tham dự
+        </label>
+
+        <button type="submit" id="btnSubmit">Gửi xác nhận</button>
+        <p class="form-message" id="formMessage" role="status"></p>
+      </form>
+    </section>
+
+    <!-- HỘP QUÀ YÊU THƯƠNG (Thêm vào sau RSVP) -->
+    <section class="gift-section paper-section decorated">
+      <h2>Hộp Quà Yêu Thương</h2>
+      <div class="gift-box-container">
+        <!-- <p class="gift-hint">Nhấp vào nút dưới đây để gửi lời chúc mừng và quà cưới đến cô dâu & chú rể nhé!</p> -->
+        <button type="button" class="gift-button" id="openGiftBtn">
+          <span class="gift-icon">🎁</span> Gửi Mừng Cưới
+        </button>
+      </div>
+    </section>
+
+    <!-- POP-UP MODAL HIỂN THỊ MÃ QR -->
+    <div class="gift-modal" id="giftModal" aria-hidden="true">
+      <div class="modal-overlay" id="modalOverlay"></div>
+      <div class="modal-content">
+        <button type="button" class="close-modal-btn" id="closeGiftBtn" aria-label="Đóng">&times;</button>
+        <h3>Mừng Cưới Đến Chú Rể & Cô Dâu</h3>
+        <p class="modal-subtitle">Xin chân thành cảm ơn tình cảm của bạn!</p>
+
+        <div class="qr-grid">
+          <!-- QR Chú Rể -->
+          <div class="qr-card">
+            <h4>Mừng cưới Chú Rể</h4>
+            <!-- Bạn thay đường dẫn ảnh QR chú rể vào đây -->
+            <img src="image/anhQR1.png" alt="Mã QR tài khoản Chú Rể" class="qr-image" />
+            <p class="account-info"><strong>Nguyễn Đình Tuyến</strong><br>STK: 8000143104008<br>Ngân hàng: MBbank</p>
+          </div>
+
+          <!-- QR Cô Dâu -->
+          <div class="qr-card">
+            <h4>Mừng cưới Cô Dâu</h4>
+            <!-- Bạn thay đường dẫn ảnh QR cô dâu vào đây -->
+            <img src="image/anhQR2.png" alt="Mã QR tài khoản Cô Dâu" class="qr-image" />
+            <p class="account-info"><strong>Nguyễn Thị Lệ Hà</strong><br>STK: 1038883373 <br>Ngân hàng: Vietcombank</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Đoạn JavaScript xử lý chức năng gửi dữ liệu -->
+    <script>
+      document.getElementById('rsvpForm').addEventListener('submit', function (e) {
+        e.preventDefault(); // Ngăn trang bị reload khi nhấn nút gửi
+
+        const nameInput = document.getElementById('guestName').value.trim();
+        const attendanceInput = document.querySelector('input[name="attendance"]:checked').value;
+        const submitButton = document.getElementById('btnSubmit');
+        const formMessage = document.getElementById('formMessage');
+
+        // Kiểm tra dữ liệu đầu vào
+        if (!nameInput) {
+          formMessage.style.color = "red";
+          formMessage.innerText = "Vui lòng nhập họ tên của bạn nhé!";
+          return;
+        }
+
+        // Trạng thái chờ khi đang xử lý dữ liệu đám mây
+        submitButton.innerText = "Đang gửi...";
+        submitButton.disabled = true;
+        formMessage.style.color = "#888888";
+        formMessage.innerText = "Hệ thống đang ghi nhận thông tin...";
+
+        // Đóng gói dữ liệu (Đảm bảo key ThoiGian, HoTen, ThamDu trùng với file Apps Script)
+        const guestData = {
+          ThoiGian: new Date().toLocaleString('vi-VN'),
+          HoTen: nameInput,
+          ThamDu: attendanceInput
+        };
+
+        // Đường dẫn API cá nhân của bạn
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxkEhGdfOaKPIgxNPuM1L2XdmzZUgk2h4HlUCLvOcAI7v2TjU9EMkwNynuNS4sn59-sUg/exec';
+
+        fetch(scriptURL, {
+          method: 'POST',
+          mode: 'no-cors', // Khắc phục lỗi bảo mật CORS khi đẩy dữ liệu chéo miền sang Google
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(guestData)
+        })
+          .then(() => {
+            // Trả về trạng thái thành công trực tiếp lên giao diện thiệp
+            formMessage.style.color = "green";
+            formMessage.innerText = "Xác nhận thành công! Cảm ơn bạn rất nhiều. ❤️";
+
+            // Reset lại form để người khác nhập hoặc xóa text cũ đi
+            document.getElementById('rsvpForm').reset();
+            submitButton.innerText = "Gửi xác nhận";
+            submitButton.disabled = false;
+          })
+          .catch(error => {
+            console.error('Lỗi kết nối:', error);
+            formMessage.style.color = "red";
+            formMessage.innerText = "Có lỗi xảy ra khi kết nối mạng. Bạn thử lại nhé!";
+
+            submitButton.innerText = "Gửi xác nhận";
+            submitButton.disabled = false;
+          });
+      });
+    </script>
+
+    <section class="story-section">
+      <p class="quote">Hạnh phúc lớn nhất chính là có thể đặt tay mình vào tay em.</p>
+      <div class="signature-photo">
+        <!-- Thẻ <br /> đã được loại bỏ, các chữ được bọc trong các thẻ con riêng biệt -->
+        <div class="signature">
+          <div>Tuyến</div>
+          <div class="ampersand">&</div>
+          <div>Hà</div>
+        </div>
+        <img src="image/anh18.jpg" alt="Ảnh cưới cô dâu chú rể" loading="lazy" />
+      </div>
+    </section>
+
+    <section class="album-section paper-section chapter-section">
+      <div class="album-grid">
+        <img src="image/anh26.1.jpg" alt="Ảnh chú rể" loading="lazy" />
+        <img src="image/anh17.jpg" alt="Ảnh cô dâu" />
+        <img class="wide" src="image/anh27.JPG" alt="Ảnh cưới lớn" loading="lazy" />
+      </div>
+
+      <h2 class="chapter-title">Chapter Three</h2>
+      <p class="album-description">"Giữa thế gian huyên náo, em là điều duy nhất đáng giá."</p>
+
+      <div class="album-grid bottom-album">
+        <img src="image/anh28.1.jpg" alt="Ảnh album 1" loading="lazy" />
+        <img src="image/anh29.jpg" alt="Ảnh album 2" loading="lazy" />
+      </div>
+    </section>
+
+    <section class="thanks-section">
+      <img src="image/anh30.jpg" alt="Ảnh cảm ơn" loading="lazy" />
+      <p>Thank You!</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1644 @@
+﻿:root {
+  --wine: #842323;
+  --wine-dark: #671818;
+  --cream: #fffdf3;
+  --ink: #1d1514;
+  --muted: #8b4742;
+  --accent: #c90d08;
+  --shadow: 0 18px 45px rgba(50, 20, 18, 0.24);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #dedede;
+  color: var(--ink);
+  font-family: "Times New Roman", Georgia, serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.wedding-card {
+  position: relative;
+  width: min(100%, 430px);
+  margin: 0 auto;
+  overflow: hidden;
+  background: var(--wine);
+}
+
+.music-button {
+  position: fixed;
+  z-index: 20;
+  top: 16px;
+  right: calc(50% - 205px);
+  width: 32px;
+  height: 32px;
+  border: 2px solid #f6efe8;
+  border-radius: 50%;
+  background: #111;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.music-button.is-playing {
+  background: var(--accent);
+}
+
+.hero-section {
+  min-height: 640px;
+  padding: 24px 26px 0;
+  color: #fff;
+}
+
+.eyebrow,
+.ticket-title,
+h1,
+.paper-section h2,
+.couple-section h3,
+.signature,
+.quote,
+.thanks-section p {
+  font-family: "Brush Script MT", "Segoe Script", cursive;
+  font-weight: 400;
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 30px;
+}
+
+.wedding-date {
+  margin: 10px 0 8px;
+  font-size: 14px;
+  font-weight: 700;
+  font-style: italic;
+}
+
+h1 {
+  margin: 0 0 8px;
+  text-align: center;
+  font-size: clamp(29px, 9vw, 38px);
+  line-height: 1.05;
+}
+
+h1 span {
+  font-size: 0.72em;
+}
+
+.hero-photo {
+  width: 86%;
+  height: 0 px;
+  margin: 0 auto;
+  object-fit: scale-down;
+  object-position: center top;
+}
+
+.ticket-title {
+  width: 100%;
+  margin-top: 30px;
+  padding: 22px 18px 14px;
+  border-radius: 58px 58px 0 0;
+  background: var(--cream);
+  color: #111;
+  text-align: center;
+  font-size: 32px;
+}
+
+.paper-section {
+  margin: 8px 24px 0;
+  padding: 28px 12px;
+  background: var(--cream);
+}
+
+.decorated {
+  position: relative;
+  border-top: 3px solid var(--wine);
+  border-bottom: 3px solid var(--wine);
+}
+
+.decorated::before,
+.decorated::after {
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--wine);
+  top: -17px;
+}
+
+.decorated::before {
+  left: -16px;
+}
+
+.decorated::after {
+  right: -16px;
+}
+
+.family-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  text-align: center;
+}
+
+.family-grid h2 {
+  margin: 0 0 4px;
+  font-size: 16px;
+}
+
+.family-grid p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.25;
+}
+
+.family-grid img {
+  width: 132px;
+  aspect-ratio: 1;
+  margin: 16px auto;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+}
+
+.couple-section h3 {
+  margin: 0;
+  color: var(--wine);
+  font-size: 23px;
+}
+
+.countdown {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin: 22px auto 0;
+  max-width: 280px;
+}
+
+.countdown div {
+  min-height: 58px;
+  padding: 8px 4px;
+  border-radius: 4px;
+  background: #050505;
+  color: #fff;
+  text-align: center;
+}
+
+.countdown strong,
+.countdown span {
+  display: block;
+}
+
+.countdown strong {
+  font-size: 18px;
+}
+
+.countdown span {
+  font-size: 14px;
+}
+
+.paper-section h2 {
+  margin: 0 0 18px;
+  text-align: center;
+  font-size: 34px;
+  line-height: 1;
+}
+
+.photo-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.photo-row img {
+  width: 100%;
+  height: 152px;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+}
+
+.formal-text,
+.venue,
+.paper-section>p {
+  text-align: center;
+}
+
+.formal-text {
+  margin-top: 0;
+  font-weight: 700;
+}
+
+.time-label {
+  margin: 18px 0 8px;
+  text-align: center;
+}
+
+.date-strip {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr;
+  align-items: center;
+  width: min(100%, 250px);
+  margin: 0 auto 22px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.date-strip>div {
+  min-height: 76px;
+  display: grid;
+  place-items: center;
+}
+
+.date-center {
+  border-left: 1px solid #5a3b35;
+  border-right: 1px solid #5a3b35;
+  line-height: 1.15;
+}
+
+.date-center span,
+.date-center strong {
+  display: block;
+}
+
+.date-center strong {
+  font-size: 22px;
+  font-style: italic;
+}
+
+.calendar-card {
+  position: relative;
+  width: min(100%, 324px);
+  margin: 0 auto 22px;
+  padding: 56px 16px 18px;
+  overflow: hidden;
+  border: 1px solid #312b28;
+  border-radius: 4px;
+  background: #fffdf8;
+}
+
+.calendar-title {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  padding: 8px 34px;
+  background: var(--wine);
+  color: #fff;
+  text-align: left;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.calendar-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px 8px;
+  text-align: center;
+}
+
+.calendar-weekdays {
+  margin-bottom: 14px;
+  font-size: 12px;
+}
+
+.calendar-days {
+  font-size: 13px;
+}
+
+.calendar-days span {
+  min-height: 20px;
+  display: grid;
+  place-items: center;
+}
+
+.calendar-days .active-day {
+  position: relative;
+  color: #fff;
+  font-weight: 700;
+}
+
+.calendar-days .active-day::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #e14a4a;
+  box-shadow: 0 0 0 5px rgba(225, 74, 74, 0.16);
+}
+
+.calendar-watermark {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 112px;
+  z-index: 1;
+  color: rgba(132, 35, 35, 0.12);
+  text-align: center;
+  font-size: 84px;
+  font-weight: 700;
+  pointer-events: none;
+}
+
+.venue {
+  font-weight: 700;
+  font-style: italic;
+}
+
+.map-link {
+  display: block;
+  width: min(100%, 268px);
+  margin: 16px auto 0;
+}
+
+.map-link img {
+  width: 100%;
+  border: 1px solid #d9d1c5;
+}
+
+.double-happiness {
+  width: 74px;
+  height: 74px;
+  margin: -4px auto 18px;
+  display: grid;
+  place-items: center;
+  border: 4px solid var(--accent);
+  border-radius: 8px;
+  color: var(--accent);
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.rsvp-form {
+  width: min(100%, 286px);
+  margin: 0 auto 8px;
+  padding: 30px;
+  border: 1px solid #ddd9d1;
+  border-radius: 4px;
+  background: #fffefa;
+  box-shadow: var(--shadow);
+}
+
+.rsvp-form label,
+.rsvp-form p {
+  font-size: 14px;
+}
+
+.rsvp-form input[type="text"] {
+  width: 100%;
+  height: 30px;
+  margin: 8px 0 14px;
+  padding: 6px 8px;
+  border: 1px solid #d8d8d8;
+  border-radius: 3px;
+  font: inherit;
+}
+
+.radio-line {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 6px 0;
+}
+
+.rsvp-form button {
+  width: 100%;
+  min-height: 36px;
+  margin-top: 18px;
+  border: 0;
+  border-radius: 4px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/*.form-message {
+  min-height: 18px;
+  margin: 12px 0 0;
+  color: var(--wine);
+  font-weight: 700;
+}*/
+.form-message {
+  margin-top: 15px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+
+.story-section {
+  padding: 18px 24px 22px;
+  color: #fff;
+}
+
+.quote {
+  margin: 8px 0 28px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 1.45;
+}
+
+.signature-photo {
+  display: grid;
+  grid-template-columns: 3fr 8fr;
+  align-items: stretch;
+  min-height: 420px;
+  background: var(--cream);
+  color: var(--wine);
+}
+
+.signature {
+  min-width: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* Xếp các chữ theo hàng dọc */
+  align-items: center;
+  /* Căn giữa theo chiều ngang */
+
+  justify-content: center;
+  /* Đưa toàn bộ cụm chữ vào chính giữa khung dọc */
+  gap: 12px;
+  /* KHOẢNG CÁCH GIỮA CÁCH CHỮ: Thay đổi số này để chỉnh độ gần/xa */
+
+  padding: 0 8px;
+  text-align: center;
+  font-size: clamp(30px, 8vw, 42px);
+  line-height: 1.2;
+  /* Thu hẹp thêm khoảng cách dòng của từng chữ nếu cần */
+}
+
+.signature span {
+  color: var(--accent);
+  font-size: 0.78em;
+  line-height: 1;
+}
+
+.signature-photo img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.album-section {
+  padding: 12px 12px 30px;
+}
+
+.chapter-section {
+  margin-top: 0;
+}
+
+.album-section .quote {
+  color: var(--wine);
+}
+
+.album-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.album-grid img {
+  width: 100%;
+  height: 154px;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.album-grid .wide {
+  grid-column: 1 / -1;
+  height: 423px;
+  margin-top: 4px;
+}
+
+.chapter-title {
+  margin: 22px 18px 18px 0;
+  color: var(--wine);
+  text-align: right;
+  font-family: "Brush Script MT", "Segoe Script", cursive;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.album-description {
+  margin: 0 0 20px;
+  color: var(--wine);
+  text-align: center;
+  font-family: "Brush Script MT", "Segoe Script", cursive;
+  font-size: 18px;
+  line-height: 1.45;
+}
+
+.bottom-album img {
+  height: 250px;
+}
+
+.thanks-section {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  min-height: 420px;
+  overflow: hidden;
+  background: var(--wine);
+}
+
+.thanks-section img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.thanks-section p {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 75%;
+  transform: translateY(-50%);
+  margin: 0;
+  color: #fff;
+  text-align: center;
+  font-size: 44px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.42);
+}
+
+
+/* Hiệu ứng trang thiệp cưới */
+body {
+  overflow-x: hidden;
+}
+
+.wedding-card {
+  animation: cardReveal 1s ease both;
+}
+
+.hero-section h1,
+.eyebrow,
+.wedding-date {
+  animation: softDrop 1s ease both;
+}
+
+.hero-section h1 {
+  animation-delay: 0.18s;
+}
+
+.hero-photo {
+  animation: heroFloat 7s ease-in-out infinite;
+  filter: drop-shadow(0 24px 28px rgba(48, 10, 8, 0.28));
+}
+
+.ticket-title {
+  animation: riseUp 0.9s ease both;
+  animation-delay: 0.32s;
+}
+
+.music-button {
+  animation: musicPulse 2.8s ease-in-out infinite;
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.42);
+}
+
+.paper-section,
+.story-section,
+.thanks-section {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1.35s cubic-bezier(0.22, 1, 0.36, 1), transform 1.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+body.effects-ready .paper-section,
+body.effects-ready .story-section,
+body.effects-ready .thanks-section {
+  opacity: 0;
+  transform: translateY(34px);
+}
+
+body.effects-ready .paper-section.is-visible,
+body.effects-ready .story-section.is-visible,
+body.effects-ready .thanks-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.photo-row img,
+.album-grid img,
+.signature-photo img,
+.family-grid img {
+  transition: transform 0.55s ease, box-shadow 0.55s ease, filter 0.55s ease;
+}
+
+.photo-row img:hover,
+.album-grid img:hover,
+.signature-photo img:hover,
+.family-grid img:hover {
+  transform: translateY(-6px) scale(1.025);
+  filter: brightness(1.04);
+  box-shadow: 0 24px 42px rgba(50, 20, 18, 0.32);
+}
+
+.countdown div {
+  animation: countGlow 3.8s ease-in-out infinite;
+}
+
+.countdown div:nth-child(2) {
+  animation-delay: 0.18s;
+}
+
+.countdown div:nth-child(3) {
+  animation-delay: 0.36s;
+}
+
+.countdown div:nth-child(4) {
+  animation-delay: 0.54s;
+}
+
+.chapter-title,
+.paper-section h2,
+.thanks-section p {
+  animation: textShine 5.5s ease-in-out infinite;
+}
+
+.effect-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 12;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.falling-piece {
+  position: absolute;
+  top: -32px;
+  color: rgba(255, 245, 238, 0.82);
+  font-family: Georgia, serif;
+  font-size: var(--piece-size, 16px);
+  opacity: 0;
+  text-shadow: 0 3px 10px rgba(90, 20, 20, 0.28);
+  animation: fallPiece var(--fall-duration, 7s) linear forwards;
+}
+
+.falling-piece.is-red {
+  color: rgba(210, 55, 55, 0.8);
+}
+
+@keyframes cardReveal {
+  from {
+    opacity: 0;
+    transform: scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes softDrop {
+  from {
+    opacity: 0;
+    transform: translateY(-18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes riseUp {
+  from {
+    opacity: 0;
+    transform: translateY(34px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes musicPulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.32);
+  }
+
+  50% {
+    transform: scale(1.08);
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes countGlow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+  }
+
+  50% {
+    box-shadow: 0 0 18px rgba(255, 255, 255, 0.22);
+  }
+}
+
+@keyframes textShine {
+
+  0%,
+  100% {
+    text-shadow: 0 0 0 rgba(132, 35, 35, 0);
+  }
+
+  50% {
+    text-shadow: 0 8px 22px rgba(132, 35, 35, 0.18);
+  }
+}
+
+@keyframes fallPiece {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -30px, 0) rotate(0deg);
+  }
+
+  12% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(var(--drift, 28px), 110vh, 0) rotate(360deg);
+  }
+}
+
+
+/* Màn mở thiệp và hiệu ứng nâng cấp */
+body.invitation-locked {
+  overflow: hidden;
+}
+
+.opening-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at 50% 32%, rgba(255, 242, 226, 0.2), transparent 34%),
+    linear-gradient(155deg, #681717, #9b2626 48%, #5a1111);
+  color: #fff;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.75s ease, visibility 0.75s ease;
+}
+
+.opening-screen.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.opening-card {
+  width: min(100%, 330px);
+  padding: 34px 24px 30px;
+  border: 1px solid rgba(255, 245, 230, 0.56);
+  background: rgba(255, 253, 243, 0.1);
+  text-align: center;
+  box-shadow: 0 30px 90px rgba(35, 0, 0, 0.34);
+  backdrop-filter: blur(10px);
+  animation: openingCardIn 0.9s ease both;
+}
+
+.opening-envelope {
+  position: relative;
+  width: 132px;
+  height: 92px;
+  margin: 0 auto 24px;
+  perspective: 500px;
+}
+
+.envelope-body {
+  position: absolute;
+  inset: 28px 0 0;
+  display: grid;
+  place-items: center;
+  border-radius: 0 0 8px 8px;
+  background: #fff8ec;
+  color: var(--wine);
+  font-size: 34px;
+  box-shadow: 0 14px 30px rgba(40, 0, 0, 0.24);
+}
+
+.envelope-flap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  margin: auto;
+  border-left: 66px solid transparent;
+  border-right: 66px solid transparent;
+  border-bottom: 48px solid #f7e5cf;
+  transform-origin: bottom center;
+  animation: flapOpen 2.2s ease-in-out infinite;
+}
+
+.opening-small,
+.opening-date {
+  margin: 0;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+}
+
+.opening-card h2 {
+  margin: 10px 0 8px;
+  font-family: "Brush Script MT", "Segoe Script", cursive;
+  font-size: 38px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.open-invitation {
+  min-width: 138px;
+  min-height: 42px;
+  margin-top: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 999px;
+  background: #fff8ec;
+  color: var(--wine);
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 12px 30px rgba(40, 0, 0, 0.24);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.open-invitation:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 38px rgba(40, 0, 0, 0.32);
+}
+
+.burst-heart {
+  position: fixed;
+  z-index: 70;
+  left: 50%;
+  top: 54%;
+  color: #fff6ef;
+  font-size: 18px;
+  pointer-events: none;
+  animation: burstHeart 0.9s ease-out forwards;
+}
+
+/* Hiệu ứng chữ và ảnh chạy vào khi cuộn tới từng phần */
+body.effects-ready .paper-section h2,
+body.effects-ready .paper-section .formal-text,
+body.effects-ready .paper-section .time-label,
+body.effects-ready .paper-section .venue,
+body.effects-ready .quote,
+body.effects-ready .chapter-title,
+body.effects-ready .album-description,
+body.effects-ready .thanks-section p {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+body.effects-ready .family-grid article,
+body.effects-ready .date-strip,
+body.effects-ready .calendar-card,
+body.effects-ready .rsvp-form,
+body.effects-ready .signature-photo {
+  opacity: 0;
+}
+
+body.effects-ready .is-visible h2,
+body.effects-ready .is-visible .formal-text,
+body.effects-ready .is-visible .time-label,
+body.effects-ready .is-visible .venue,
+body.effects-ready .story-section.is-visible .quote,
+body.effects-ready .is-visible .chapter-title,
+body.effects-ready .is-visible .album-description,
+body.effects-ready .thanks-section.is-visible p {
+  animation: textRiseIn 0.9s ease both;
+}
+
+body.effects-ready .is-visible .family-grid article:first-child,
+body.effects-ready .is-visible .photo-row img:first-child,
+body.effects-ready .is-visible .album-grid img:nth-child(odd):not(.wide) {
+  animation: slideInLeft 0.95s ease both;
+}
+
+body.effects-ready .is-visible .family-grid article:nth-child(2),
+body.effects-ready .is-visible .photo-row img:nth-child(3),
+body.effects-ready .is-visible .album-grid img:nth-child(even):not(.wide) {
+  animation: slideInRight 0.95s ease both;
+}
+
+body.effects-ready .is-visible .photo-row img:nth-child(2),
+body.effects-ready .is-visible .album-grid .wide,
+body.effects-ready .is-visible .date-strip,
+body.effects-ready .is-visible .calendar-card,
+body.effects-ready .is-visible .rsvp-form,
+body.effects-ready .story-section.is-visible .signature-photo,
+body.effects-ready .thanks-section.is-visible img {
+  animation: zoomInSoft 0.95s ease both;
+}
+
+body.effects-ready .is-visible .formal-text,
+body.effects-ready .is-visible .time-label,
+body.effects-ready .is-visible .date-strip,
+body.effects-ready .is-visible .chapter-title {
+  animation-delay: 0.12s;
+}
+
+body.effects-ready .is-visible .calendar-card,
+body.effects-ready .is-visible .album-description,
+body.effects-ready .story-section.is-visible .signature-photo {
+  animation-delay: 0.22s;
+}
+
+body.effects-ready .is-visible .rsvp-form,
+body.effects-ready .is-visible .venue,
+body.effects-ready .thanks-section.is-visible p {
+  animation-delay: 0.32s;
+}
+
+.rsvp-form {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.rsvp-form:focus-within {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 52px rgba(50, 20, 18, 0.3);
+}
+
+.rsvp-form button {
+  transition: transform 0.22s ease, filter 0.22s ease;
+}
+
+.rsvp-form button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.06);
+}
+
+@keyframes openingCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(28px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes flapOpen {
+
+  0%,
+  100% {
+    transform: rotateX(0deg);
+  }
+
+  50% {
+    transform: rotateX(-62deg);
+  }
+}
+
+@keyframes burstHeart {
+  from {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(0deg) scale(0.7);
+  }
+
+  to {
+    opacity: 0;
+    transform: translate(calc(-50% + var(--burst-x)), calc(-50% + var(--burst-y))) rotate(220deg) scale(1.5);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-86px) scale(0.96);
+    filter: blur(2px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(86px) scale(0.96);
+    filter: blur(2px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes textRiseIn {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+    filter: blur(1.5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes zoomInSoft {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Hiệu ứng cuộn mượt tự nhiên cho toàn bộ chữ và ảnh */
+body.effects-ready .reveal-item {
+  opacity: 0 !important;
+  filter: blur(2px);
+  transform: translate3d(0, 34px, 0) scale(0.985) !important;
+  transition:
+    opacity 1.45s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1.45s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 1.45s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.65s ease,
+    filter 0.65s ease;
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform, filter;
+}
+
+body.effects-ready .reveal-left {
+  transform: translate3d(-54px, 24px, 0) scale(0.985) !important;
+}
+
+body.effects-ready .reveal-right {
+  transform: translate3d(54px, 24px, 0) scale(0.985) !important;
+}
+
+body.effects-ready .reveal-zoom {
+  transform: translate3d(0, 24px, 0) scale(0.955) !important;
+}
+
+body.effects-ready .reveal-soft {
+  transform: translate3d(0, 22px, 0) scale(1) !important;
+}
+
+body.effects-ready .is-visible .reveal-item,
+body.effects-ready .reveal-item.is-visible {
+  opacity: 1 !important;
+  filter: blur(0);
+  transform: translate3d(0, 0, 0) scale(1) !important;
+  animation: none !important;
+}
+
+body.effects-ready .is-visible .photo-row img,
+body.effects-ready .is-visible .album-grid img,
+body.effects-ready .is-visible .family-grid article,
+body.effects-ready .story-section.is-visible .signature-photo,
+body.effects-ready .thanks-section.is-visible img,
+body.effects-ready .thanks-section.is-visible p {
+  animation: none !important;
+}
+
+.hero-section .reveal-item {
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.photo-row img,
+.album-grid img,
+.family-grid img,
+.signature-photo img,
+.map-link img,
+.thanks-section img {
+  backface-visibility: hidden;
+}
+
+@media (max-width: 430px) {
+  body.effects-ready .reveal-left {
+    transform: translate3d(-34px, 22px, 0) scale(0.985) !important;
+  }
+
+  body.effects-ready .reveal-right {
+    transform: translate3d(34px, 22px, 0) scale(0.985) !important;
+  }
+}
+
+/* Bộ hiệu ứng cuối: mượt, chậm, áp dụng cho từng chữ/ảnh riêng lẻ */
+body.effects-ready .smooth-reveal {
+  opacity: 0 !important;
+  filter: blur(2px);
+  transition:
+    opacity 2.05s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 2.05s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 2.05s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.65s ease;
+  transition-delay: var(--smooth-delay, 0ms);
+  will-change: opacity, transform, filter;
+}
+
+body.effects-ready .smooth-reveal.from-left {
+  transform: translate3d(-62px, 20px, 0) scale(0.985) !important;
+}
+
+body.effects-ready .smooth-reveal.from-right {
+  transform: translate3d(62px, 20px, 0) scale(0.985) !important;
+}
+
+body.effects-ready .smooth-reveal.from-scale {
+  transform: translate3d(0, 28px, 0) scale(0.955) !important;
+}
+
+body.effects-ready .smooth-reveal.from-bottom {
+  transform: translate3d(0, 30px, 0) scale(1) !important;
+}
+
+body.effects-ready .smooth-reveal.is-revealed {
+  opacity: 1 !important;
+  filter: blur(0);
+  transform: translate3d(0, 0, 0) scale(1) !important;
+  animation: none !important;
+}
+
+body.effects-ready .is-visible .photo-row img,
+body.effects-ready .is-visible .album-grid img,
+body.effects-ready .is-visible .family-grid article,
+body.effects-ready .story-section.is-visible .signature-photo,
+body.effects-ready .thanks-section.is-visible img,
+body.effects-ready .thanks-section.is-visible p {
+  animation: none !important;
+}
+
+body.effects-ready .paper-section h2,
+body.effects-ready .paper-section .formal-text,
+body.effects-ready .paper-section .time-label,
+body.effects-ready .paper-section .venue,
+body.effects-ready .quote,
+body.effects-ready .chapter-title,
+body.effects-ready .album-description,
+body.effects-ready .thanks-section p {
+  transform: none;
+}
+
+body.effects-ready .paper-section,
+body.effects-ready .story-section,
+body.effects-ready .thanks-section {
+  opacity: 1;
+  transform: none;
+}
+
+@media (max-width: 430px) {
+  body.effects-ready .smooth-reveal.from-left {
+    transform: translate3d(-38px, 18px, 0) scale(0.985) !important;
+  }
+
+  body.effects-ready .smooth-reveal.from-right {
+    transform: translate3d(38px, 18px, 0) scale(0.985) !important;
+  }
+}
+
+/* Hiệu ứng riêng cho tên cô dâu chú rể ở đầu thiệp */
+.hero-names {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  min-height: 64px;
+}
+
+.hero-names .name-part,
+.hero-names .name-amp {
+  display: inline-block;
+}
+
+.hero-names .name-amp {
+  font-size: 0.72em;
+}
+
+body.effects-ready .hero-names.smooth-reveal {
+  opacity: 1 !important;
+  filter: none;
+  transform: none !important;
+  transition: none;
+}
+
+body.effects-ready .hero-names .smooth-reveal.name-groom {
+  transform: translate3d(150px, 0, 0) scale(0.96) !important;
+}
+
+body.effects-ready .hero-names .smooth-reveal.name-bride {
+  transform: translate3d(-150px, 0, 0) scale(0.96) !important;
+}
+
+body.effects-ready .hero-names .smooth-reveal.name-amp {
+  transform: translate3d(0, 0, 0) scale(0.72) !important;
+}
+
+body.effects-ready .hero-names .smooth-reveal.is-revealed {
+  opacity: 1 !important;
+  filter: blur(0);
+  transform: translate3d(0, 0, 0) scale(1) !important;
+}
+
+body.effects-ready .hero-section .hero-photo.smooth-reveal.from-scale {
+  transform: translate3d(0, 42px, 0) scale(0.86) !important;
+}
+
+body.effects-ready .hero-section .hero-photo.smooth-reveal.is-revealed {
+  transform: translate3d(0, 0, 0) scale(1) !important;
+}
+
+@media (max-width: 430px) {
+  .hero-names {
+    gap: 7px;
+  }
+
+  body.effects-ready .hero-names .smooth-reveal.name-groom {
+    transform: translate3d(54px, 0, 0) scale(0.98) !important;
+  }
+
+  body.effects-ready .hero-names .smooth-reveal.name-bride {
+    transform: translate3d(-54px, 0, 0) scale(0.98) !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .effect-layer {
+    display: none;
+  }
+}
+
+@media (max-width: 380px) {
+  .paper-section {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .hero-section {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .hero-photo {
+    width: 92%;
+  }
+
+  .photo-row {
+    gap: 8px;
+  }
+
+  .signature {
+    padding: 0 6px;
+    font-size: 30px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Sửa xung đột hiệu ứng cũ: section luôn hiển thị, chỉ từng chữ/ảnh tự reveal */
+body.effects-ready .paper-section,
+body.effects-ready .story-section,
+body.effects-ready .thanks-section,
+body.effects-ready .paper-section.is-visible,
+body.effects-ready .story-section.is-visible,
+body.effects-ready .thanks-section.is-visible {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+body.effects-ready .paper-section h2:not(.smooth-reveal),
+body.effects-ready .paper-section p:not(.smooth-reveal),
+body.effects-ready .paper-section img:not(.smooth-reveal),
+body.effects-ready .story-section *:not(.smooth-reveal),
+body.effects-ready .thanks-section *:not(.smooth-reveal) {
+  opacity: 1 !important;
+  transform: none !important;
+  filter: none !important;
+}
+
+body.effects-ready .smooth-reveal {
+  opacity: 0 !important;
+  filter: blur(2px) !important;
+}
+
+body.effects-ready .smooth-reveal.is-revealed {
+  opacity: 1 !important;
+  filter: blur(0) !important;
+}
+
+/* --- CSS CHO HỘP QUÀ & POP-UP MODAL --- */
+.gift-section {
+  text-align: center;
+}
+
+.gift-hint {
+  font-size: 15px;
+  color: var(--muted);
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+/* Nút bấm Gửi Mừng Cưới bo tròn giống thiết kế mẫu */
+.gift-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #4a5d4e;
+  /* Màu chữ xanh lá thẫm phù hợp theme */
+  background-color: #ffffff;
+  border: 2px solid #e0e0e0;
+  border-radius: 999px;
+  /* Tạo bo tròn hoàn toàn */
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.gift-button:hover {
+  transform: translateY(-2px);
+  background-color: #f9f9f9;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.gift-icon {
+  font-size: 18px;
+}
+
+/* Giao diện cấu trúc Pop-up ẩn/hiện */
+.gift-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+/* Khi active sẽ hiển thị mượt mà */
+.gift-modal.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+}
+
+.modal-content {
+  position: relative;
+  z-index: 2;
+  width: min(100%, 400px);
+  max-height: 90vh;
+  overflow-y: auto;
+  background: var(--cream);
+  padding: 30px 20px 24px;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  transform: scale(0.9);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.gift-modal.is-active .modal-content {
+  transform: scale(1);
+}
+
+/* Nút đóng Pop-up */
+.close-modal-btn {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #888;
+  cursor: pointer;
+}
+
+.close-modal-btn:hover {
+  color: var(--accent);
+}
+
+.modal-content h3 {
+  font-family: "Brush Script MT", "Segoe Script", cursive;
+  font-size: 28px;
+  color: var(--wine);
+  margin: 0 0 4px;
+}
+
+.modal-subtitle {
+  font-size: 13px;
+  margin: 0 0 20px;
+  color: #666;
+}
+
+/* Grid xếp hai thẻ QR cạnh nhau hoặc tự xuống dòng trên màn hình nhỏ */
+.qr-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.qr-card {
+  background: #fff;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+}
+
+.qr-card h4 {
+  margin: 0 0 10px;
+  font-size: 15px;
+  color: var(--ink);
+}
+
+.qr-image {
+  width: 160px;
+  aspect-ratio: 1;
+  margin: 0 auto 10px;
+  object-fit: contain;
+  border: 1px solid #f0f0f0;
+}
+
+.account-info {
+  font-size: 13px;
+  line-height: 1.4;
+  margin: 0;
+  color: #444;
+}
+
+/* ==========================================================================
+   BỔ SUNG CSS TỐI ƯU HIỂN THỊ TRÊN ĐIỆN THOẠI (CHỐNG TRÀN MÀN HÌNH)
+   ========================================================================== */
+
+/* Đảm bảo khung thiệp không bao giờ vượt quá chiều rộng màn hình */
+/* ==========================================================================
+   BỔ SUNG CSS TỐI ƯU HIỂN THỊ TRÊN ĐIỆN THOẠI (CHỐNG TRÀN MÀN HÌNH)
+   ========================================================================== */
+
+/* Đảm bảo khung thiệp không bao giờ vượt quá chiều rộng màn hình */
+.wedding-card {
+  width: 100% !important;
+  max-width: 430px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  /* Cắt bỏ phần thừa bị tràn ra ngoài */
+}
+
+/* Tự động co giãn ảnh family-grid trên các dòng điện thoại nhỏ */
+.family-grid img {
+  max-width: 100% !important;
+  width: clamp(100px, 30vw, 132px) !important;
+  height: auto !important;
+  aspect-ratio: 1 / 1 !important;
+}
+
+/* Sửa lỗi tràn ảnh phần Signature (Chữ ký & Ảnh 420px) */
+.signature-photo {
+  grid-template-columns: 1fr 2.5fr !important;
+  /* Thu nhỏ cột chữ ký, nhường chỗ cho ảnh */
+  min-height: auto !important;
+  max-height: 380px;
+}
+
+.signature-photo img {
+  height: 100% !important;
+  max-height: 380px;
+  object-fit: cover;
+}
+
+.signature {
+  font-size: clamp(20px, 6vw, 32px) !important;
+  /* Giảm size chữ ký khi xem trên mobile */
+}
+
+/* Thu nhỏ chiều cao ảnh hàng album để tránh kéo trang quá dài */
+.photo-row img {
+  height: clamp(90px, 25vw, 140px) !important;
+}
+
+.album-grid img {
+  height: clamp(100px, 28vw, 154px) !important;
+}
+
+.album-grid .wide {
+  height: clamp(280px, 80vw, 423px) !important;
+}
+
+.thanks-section img,
+.thanks-section {
+  height: clamp(280px, 80vw, 420px) !important;
+  min-height: auto !important;
+}
+
+/* SỬA LỖI HIỆU ỨNG DI CHUYỂN (TRANSLATE) ĐẨY CHỮ RA KHỎI MÀN HÌNH CHÂM LÀM TRÀN KHUNG */
+@media (max-width: 480px) {
+  body.effects-ready .hero-names .smooth-reveal.name-groom {
+    transform: translate3d(20px, 0, 0) scale(0.98) !important;
+    /* Giảm khoảng cách lao vào từ 150px xuống 20px */
+  }
+
+  body.effects-ready .hero-names .smooth-reveal.name-bride {
+    transform: translate3d(-20px, 0, 0) scale(0.98) !important;
+  }
+
+  body.effects-ready .smooth-reveal.from-left {
+    transform: translate3d(-15px, 10px, 0) scale(0.98) !important;
+  }
+
+  body.effects-ready .smooth-reveal.from-right {
+    transform: translate3d(15px, 10px, 0) scale(0.98) !important;
+  }
+
+  /* Căn chỉnh lại form xác nhận và hộp quà cho vừa vặn */
+  .rsvp-form,
+  .modal-content {
+    width: 92% !important;
+    padding: 20px 15px !important;
+  }
+
+  /* Xếp 2 mã QR dọc nhau trên màn hình điện thoại rất nhỏ để không bị ép kích thước */
+  .qr-grid {
+    gap: 15px !important;
+  }
+
+  .qr-image {
+    width: 140px !important;
+  }
+}
