@@ -1441,7 +1441,7 @@ body.effects-ready .hero-section .hero-photo.smooth-reveal.is-revealed {
   }
 
   .album-grid .wide {
-    height: auto !important;
+    height: auto;
     max-height: 300px !important;
     object-fit: contain !important;
   }
