@@ -1,4 +1,4 @@
-﻿// Đổi ngày giờ cưới tại đây. Định dạng: YYYY-MM-DDTHH:mm:ss+07:00
+// Đổi ngày giờ cưới tại đây. Định dạng: YYYY-MM-DDTHH:mm:ss+07:00
 const weddingDate = new Date("2026-08-08T10:00:00+07:00");
 
 const countdownParts = {
@@ -211,6 +211,7 @@ function createFallingPiece() {
 }
 
 setInterval(createFallingPiece, 1700);
+
 // Màn mở thiệp: bấm nút để mở thiệp và tạo hiệu ứng tim bung.
 const openingScreen = document.getElementById("openingScreen");
 const openInvitationButton = document.getElementById("openInvitation");
@@ -262,27 +263,16 @@ function toggleGiftModal(isOpen) {
   if (isOpen) {
     giftModal.classList.add('is-active');
     giftModal.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden'; // Ngăn cuộn trang nền khi đang xem QR
+    document.body.style.overflow = 'hidden';
   } else {
     giftModal.classList.remove('is-active');
     giftModal.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = ''; // Trả lại trạng thái cuộn bình thường
+    document.body.style.overflow = '';
   }
 }
 
-// Lắng nghe các thao tác nhấp chuột
 if (openGiftBtn && giftModal) {
   openGiftBtn.addEventListener('click', () => toggleGiftModal(true));
   closeGiftBtn.addEventListener('click', () => toggleGiftModal(false));
   modalOverlay.addEventListener('click', () => toggleGiftModal(false));
 }
-
-
-
-
-
-
-
-
-
-
