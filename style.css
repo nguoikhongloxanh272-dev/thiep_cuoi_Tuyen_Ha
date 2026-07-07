@@ -1651,3 +1651,59 @@ body.effects-ready .smooth-reveal.is-revealed {
     width: 140px !important;
   }
 }
+
+/* ==========================================================================
+   CẬP NHẬT TỐI ƯU THỰC TẾ TRÊN ĐIỆN THOẠI (FIX MẤT CHỮ VÀ MẤT MẶT ẢNH)
+   ========================================================================== */
+
+/* 1. SỬA LỖI MẤT KÝ TỰ / ÉP CHỮ QUÁ ĐÀ */
+.opening-names, 
+.opening-card h2, 
+.hero-names {
+  white-space: normal !important;      /* Cho phép tự động xuống dòng nếu màn hình quá bé để KHÔNG BỊ MẤT CHỮ */
+  text-overflow: clip !important;      /* Bỏ dấu 3 chấm gây mất ký tự */
+  overflow: visible !important;        /* Hiển thị toàn bộ chữ */
+  word-break: keep-all !important;     /* Không bẻ gãy từ ở giữa chữ */
+  text-align: center !important;
+  font-size: clamp(26px, 7.5vw, 36px) !important; /* Cỡ chữ vừa vặn nhất */
+}
+
+/* 2. SỬA LỖI ẢNH BỊ MẤT PHẦN TRÊN (CHE MẤT MẶT) */
+.hero-photo,
+.signature-photo img,
+.thanks-section img,
+.album-grid img,
+.family-grid img {
+  height: auto !important;             /* Bỏ ép chiều cao cố định để ảnh giữ nguyên tỉ lệ gốc */
+  max-height: 75vh !important;         /* Giới hạn ảnh không quá dài vượt màn hình */
+  object-fit: contain !important;      /* Ép ảnh thu nhỏ trọn vẹn vào khung, KHÔNG BỊ CẮT BẤT CỨ PHẦN NÀO */
+  object-position: center center !important; /* Luôn giữ trọng tâm ảnh ở giữa */
+}
+
+/* Sửa riêng phần khung Chữ ký & Ảnh cưới để không ép ảnh */
+.signature-photo {
+  display: flex !important;
+  flex-direction: column-reverse !important; /* Đẩy chữ ký xuống dưới ảnh trên điện thoại để ảnh có không gian rộng nhất */
+  background: var(--cream) !important;
+}
+
+.signature-photo img {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 400px !important;
+  object-fit: cover !important;        /* Giữ cover cho phần này nhưng chỉnh vị trí lấy nét */
+  object-position: center 15% !important; /* Tập trung lấy nét vào phần khuôn mặt (khoảng 15% từ trên xuống) */
+}
+
+.signature {
+  padding: 15px 0 !important;
+  flex-direction: row !important;      /* Chuyển chữ ký thành hàng ngang cho dễ nhìn trên điện thoại */
+  gap: 15px !important;
+}
+
+/* Đảm bảo toàn bộ card mở thiệp co giãn thoải mái */
+.opening-card {
+  width: 90% !important;
+  max-width: 340px !important;
+  padding: 24px 16px !important;
+}
