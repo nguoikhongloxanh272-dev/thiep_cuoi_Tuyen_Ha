@@ -828,14 +828,23 @@ body.invitation-locked {
 }
 
 .opening-card {
-  width: min(100%, 330px);
-  padding: 34px 24px 30px;
+  width: min(100%, 350px); /* Nới rộng khung từ 330px lên 350px để chữ có thêm chỗ */
+  padding: 34px 12px 30px;  /* Giảm padding hai bên từ 24px xuống 12px để tăng không gian ngang */
   border: 1px solid rgba(255, 245, 230, 0.56);
   background: rgba(255, 253, 243, 0.1);
   text-align: center;
   box-shadow: 0 30px 90px rgba(35, 0, 0, 0.34);
   backdrop-filter: blur(10px);
   animation: openingCardIn 0.9s ease both;
+}
+
+/* THÊM ĐOẠN NÀY VÀO NGAY DƯỚI ĐỂ ÉP CHỮ LÊN 1 DÒNG */
+.opening-names {
+  white-space: nowrap !important;        /* Tuyệt đối không cho xuống dòng */
+  word-break: keep-all !important;       /* Giữ nguyên các từ không bị ngắt đôi */
+  font-size: clamp(22px, 7.5vw, 32px) !important; /* Tự động co giãn cỡ chữ linh hoạt theo màn hình */
+  display: block;
+  margin: 12px 0 10px;
 }
 
 .opening-envelope {
