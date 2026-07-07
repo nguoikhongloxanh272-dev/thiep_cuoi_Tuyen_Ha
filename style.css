@@ -1527,3 +1527,22 @@ body.effects-ready .hero-section .hero-photo.smooth-reveal.is-revealed {
     font-size: 26px;
   }
 }
+
+.couple-names {
+    display: flex;
+    flex-wrap: wrap;        /* Cho phép tự động xuống dòng nếu hết chỗ */
+    justify-content: center; /* Căn giữa dòng tên */
+    align-items: center;
+    gap: 10px;               /* Tạo khoảng cách thông thoáng giữa tên và ký tự & */
+    width: 100%;
+    text-align: center;
+}
+
+.couple-names span {
+    white-space: nowrap;     /* Giữ cho cụm chữ "Đình Tuyến" hoặc "Lệ Hà" không bị vỡ vụn từng chữ */
+}
+
+.and-character {
+    font-size: 0.9em;        /* Bạn có thể chỉnh cỡ ký tự & nhỏ hơn một chút cho tinh tế */
+    color: #e74c3c;          /* Hoặc đổi màu riêng cho ký tự & nếu muốn làm điểm nhấn */
+}
