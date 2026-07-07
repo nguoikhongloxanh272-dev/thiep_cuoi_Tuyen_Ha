@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   --wine: #842323;
   --wine-dark: #671818;
   --cream: #fffdf3;
@@ -22,6 +22,7 @@ body {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 .wedding-card {
@@ -95,10 +96,9 @@ h1 span {
 
 .hero-photo {
   width: 86%;
-  height: 0 px;
   margin: 0 auto;
-  object-fit: scale-down;
-  object-position: center top;
+  object-fit: contain;
+  object-position: center center;
 }
 
 .ticket-title {
@@ -426,12 +426,6 @@ h1 span {
   cursor: pointer;
 }
 
-/*.form-message {
-  min-height: 18px;
-  margin: 12px 0 0;
-  color: var(--wine);
-  font-weight: 700;
-}*/
 .form-message {
   margin-top: 15px;
   font-size: 14px;
@@ -439,7 +433,6 @@ h1 span {
   text-align: center;
   transition: all 0.3s ease;
 }
-
 
 .story-section {
   padding: 18px 24px 22px;
@@ -467,20 +460,13 @@ h1 span {
   height: 100%;
   display: flex;
   flex-direction: column;
-  /* Xếp các chữ theo hàng dọc */
   align-items: center;
-  /* Căn giữa theo chiều ngang */
-
   justify-content: center;
-  /* Đưa toàn bộ cụm chữ vào chính giữa khung dọc */
   gap: 12px;
-  /* KHOẢNG CÁCH GIỮA CÁCH CHỮ: Thay đổi số này để chỉnh độ gần/xa */
-
   padding: 0 8px;
   text-align: center;
   font-size: clamp(30px, 8vw, 42px);
   line-height: 1.2;
-  /* Thu hẹp thêm khoảng cách dòng của từng chữ nếu cần */
 }
 
 .signature span {
@@ -493,7 +479,7 @@ h1 span {
   width: 100%;
   height: 420px;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 20%;
 }
 
 .album-section {
@@ -518,7 +504,7 @@ h1 span {
   width: 100%;
   height: 154px;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 20%;
 }
 
 .album-grid .wide {
@@ -564,7 +550,7 @@ h1 span {
   width: 100%;
   height: 420px;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 20%;
 }
 
 .thanks-section p {
@@ -580,8 +566,7 @@ h1 span {
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.42);
 }
 
-
-/* Hiệu ứng trang thiệp cưới */
+/* ==================== HIỆU ỨNG ==================== */
 body {
   overflow-x: hidden;
 }
@@ -703,7 +688,6 @@ body.effects-ready .thanks-section.is-visible {
     opacity: 0;
     transform: scale(0.985);
   }
-
   to {
     opacity: 1;
     transform: scale(1);
@@ -715,7 +699,6 @@ body.effects-ready .thanks-section.is-visible {
     opacity: 0;
     transform: translateY(-18px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
@@ -727,7 +710,6 @@ body.effects-ready .thanks-section.is-visible {
     opacity: 0;
     transform: translateY(34px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
@@ -735,25 +717,21 @@ body.effects-ready .thanks-section.is-visible {
 }
 
 @keyframes heroFloat {
-
   0%,
   100% {
     transform: translateY(0);
   }
-
   50% {
     transform: translateY(-10px);
   }
 }
 
 @keyframes musicPulse {
-
   0%,
   100% {
     transform: scale(1);
     box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.32);
   }
-
   50% {
     transform: scale(1.08);
     box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
@@ -761,24 +739,20 @@ body.effects-ready .thanks-section.is-visible {
 }
 
 @keyframes countGlow {
-
   0%,
   100% {
     box-shadow: 0 0 0 rgba(255, 255, 255, 0);
   }
-
   50% {
     box-shadow: 0 0 18px rgba(255, 255, 255, 0.22);
   }
 }
 
 @keyframes textShine {
-
   0%,
   100% {
     text-shadow: 0 0 0 rgba(132, 35, 35, 0);
   }
-
   50% {
     text-shadow: 0 8px 22px rgba(132, 35, 35, 0.18);
   }
@@ -789,19 +763,16 @@ body.effects-ready .thanks-section.is-visible {
     opacity: 0;
     transform: translate3d(0, -30px, 0) rotate(0deg);
   }
-
   12% {
     opacity: 1;
   }
-
   100% {
     opacity: 0;
     transform: translate3d(var(--drift, 28px), 110vh, 0) rotate(360deg);
   }
 }
 
-
-/* Màn mở thiệp và hiệu ứng nâng cấp */
+/* ==================== MÀN MỞ THIỆP ==================== */
 body.invitation-locked {
   overflow: hidden;
 }
@@ -813,8 +784,7 @@ body.invitation-locked {
   display: grid;
   place-items: center;
   padding: 24px;
-  background:
-    radial-gradient(circle at 50% 32%, rgba(255, 242, 226, 0.2), transparent 34%),
+  background: radial-gradient(circle at 50% 32%, rgba(255, 242, 226, 0.2), transparent 34%),
     linear-gradient(155deg, #681717, #9b2626 48%, #5a1111);
   color: #fff;
   opacity: 1;
@@ -828,8 +798,8 @@ body.invitation-locked {
 }
 
 .opening-card {
-  width: min(100%, 350px); /* Nới rộng khung từ 330px lên 350px để chữ có thêm chỗ */
-  padding: 34px 12px 30px;  /* Giảm padding hai bên từ 24px xuống 12px để tăng không gian ngang */
+  width: min(100%, 350px);
+  padding: 34px 12px 30px;
   border: 1px solid rgba(255, 245, 230, 0.56);
   background: rgba(255, 253, 243, 0.1);
   text-align: center;
@@ -838,13 +808,15 @@ body.invitation-locked {
   animation: openingCardIn 0.9s ease both;
 }
 
-/* THÊM ĐOẠN NÀY VÀO NGAY DƯỚI ĐỂ ÉP CHỮ LÊN 1 DÒNG */
+/* ---- SỬA LỖI CHỮ BỊ ĐÈ TRÊN MÀN HÌNH NHỎ ---- */
 .opening-names {
-  white-space: nowrap !important;        /* Tuyệt đối không cho xuống dòng */
-  word-break: keep-all !important;       /* Giữ nguyên các từ không bị ngắt đôi */
-  font-size: clamp(22px, 7.5vw, 32px) !important; /* Tự động co giãn cỡ chữ linh hoạt theo màn hình */
+  /* BỎ white-space: nowrap để chữ xuống dòng tự nhiên */
+  white-space: normal !important;
+  word-break: keep-all !important;
+  font-size: clamp(22px, 7.5vw, 32px) !important;
   display: block;
   margin: 12px 0 10px;
+  line-height: 1.3;
 }
 
 .opening-envelope {
@@ -894,7 +866,7 @@ body.invitation-locked {
   font-family: "Brush Script MT", "Segoe Script", cursive;
   font-size: 38px;
   font-weight: 400;
-  line-height: 1;
+  line-height: 1.2;
 }
 
 .open-invitation {
@@ -927,7 +899,39 @@ body.invitation-locked {
   animation: burstHeart 0.9s ease-out forwards;
 }
 
-/* Hiệu ứng chữ và ảnh chạy vào khi cuộn tới từng phần */
+@keyframes openingCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(28px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes flapOpen {
+  0%,
+  100% {
+    transform: rotateX(0deg);
+  }
+  50% {
+    transform: rotateX(-62deg);
+  }
+}
+
+@keyframes burstHeart {
+  from {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(0deg) scale(0.7);
+  }
+  to {
+    opacity: 0;
+    transform: translate(calc(-50% + var(--burst-x)), calc(-50% + var(--burst-y))) rotate(220deg) scale(1.5);
+  }
+}
+
+/* ==================== HIỆU ỨNG REVEAL ==================== */
 body.effects-ready .paper-section h2,
 body.effects-ready .paper-section .formal-text,
 body.effects-ready .paper-section .time-label,
@@ -1000,6 +1004,56 @@ body.effects-ready .thanks-section.is-visible p {
   animation-delay: 0.32s;
 }
 
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-86px) scale(0.96);
+    filter: blur(2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(86px) scale(0.96);
+    filter: blur(2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes textRiseIn {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+    filter: blur(1.5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes zoomInSoft {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 .rsvp-form {
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
@@ -1018,173 +1072,11 @@ body.effects-ready .thanks-section.is-visible p {
   filter: brightness(1.06);
 }
 
-@keyframes openingCardIn {
-  from {
-    opacity: 0;
-    transform: translateY(28px) scale(0.96);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-@keyframes flapOpen {
-
-  0%,
-  100% {
-    transform: rotateX(0deg);
-  }
-
-  50% {
-    transform: rotateX(-62deg);
-  }
-}
-
-@keyframes burstHeart {
-  from {
-    opacity: 1;
-    transform: translate(-50%, -50%) rotate(0deg) scale(0.7);
-  }
-
-  to {
-    opacity: 0;
-    transform: translate(calc(-50% + var(--burst-x)), calc(-50% + var(--burst-y))) rotate(220deg) scale(1.5);
-  }
-}
-
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-86px) scale(0.96);
-    filter: blur(2px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0) scale(1);
-    filter: blur(0);
-  }
-}
-
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(86px) scale(0.96);
-    filter: blur(2px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0) scale(1);
-    filter: blur(0);
-  }
-}
-
-@keyframes textRiseIn {
-  from {
-    opacity: 0;
-    transform: translateY(28px);
-    filter: blur(1.5px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-    filter: blur(0);
-  }
-}
-
-@keyframes zoomInSoft {
-  from {
-    opacity: 0;
-    transform: translateY(18px) scale(0.96);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-/* Hiệu ứng cuộn mượt tự nhiên cho toàn bộ chữ và ảnh */
-body.effects-ready .reveal-item {
-  opacity: 0 !important;
-  filter: blur(2px);
-  transform: translate3d(0, 34px, 0) scale(0.985) !important;
-  transition:
-    opacity 1.45s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 1.45s cubic-bezier(0.22, 1, 0.36, 1),
-    filter 1.45s cubic-bezier(0.22, 1, 0.36, 1),
-    box-shadow 0.65s ease,
-    filter 0.65s ease;
-  transition-delay: var(--reveal-delay, 0ms);
-  will-change: opacity, transform, filter;
-}
-
-body.effects-ready .reveal-left {
-  transform: translate3d(-54px, 24px, 0) scale(0.985) !important;
-}
-
-body.effects-ready .reveal-right {
-  transform: translate3d(54px, 24px, 0) scale(0.985) !important;
-}
-
-body.effects-ready .reveal-zoom {
-  transform: translate3d(0, 24px, 0) scale(0.955) !important;
-}
-
-body.effects-ready .reveal-soft {
-  transform: translate3d(0, 22px, 0) scale(1) !important;
-}
-
-body.effects-ready .is-visible .reveal-item,
-body.effects-ready .reveal-item.is-visible {
-  opacity: 1 !important;
-  filter: blur(0);
-  transform: translate3d(0, 0, 0) scale(1) !important;
-  animation: none !important;
-}
-
-body.effects-ready .is-visible .photo-row img,
-body.effects-ready .is-visible .album-grid img,
-body.effects-ready .is-visible .family-grid article,
-body.effects-ready .story-section.is-visible .signature-photo,
-body.effects-ready .thanks-section.is-visible img,
-body.effects-ready .thanks-section.is-visible p {
-  animation: none !important;
-}
-
-.hero-section .reveal-item {
-  transition-delay: var(--reveal-delay, 0ms);
-}
-
-.photo-row img,
-.album-grid img,
-.family-grid img,
-.signature-photo img,
-.map-link img,
-.thanks-section img {
-  backface-visibility: hidden;
-}
-
-@media (max-width: 430px) {
-  body.effects-ready .reveal-left {
-    transform: translate3d(-34px, 22px, 0) scale(0.985) !important;
-  }
-
-  body.effects-ready .reveal-right {
-    transform: translate3d(34px, 22px, 0) scale(0.985) !important;
-  }
-}
-
-/* Bộ hiệu ứng cuối: mượt, chậm, áp dụng cho từng chữ/ảnh riêng lẻ */
+/* ==================== SMOOTH REVEAL ==================== */
 body.effects-ready .smooth-reveal {
   opacity: 0 !important;
   filter: blur(2px);
-  transition:
-    opacity 2.05s cubic-bezier(0.16, 1, 0.3, 1),
+  transition: opacity 2.05s cubic-bezier(0.16, 1, 0.3, 1),
     transform 2.05s cubic-bezier(0.16, 1, 0.3, 1),
     filter 2.05s cubic-bezier(0.16, 1, 0.3, 1),
     box-shadow 0.65s ease;
@@ -1246,7 +1138,6 @@ body.effects-ready .thanks-section {
   body.effects-ready .smooth-reveal.from-left {
     transform: translate3d(-38px, 18px, 0) scale(0.985) !important;
   }
-
   body.effects-ready .smooth-reveal.from-right {
     transform: translate3d(38px, 18px, 0) scale(0.985) !important;
   }
@@ -1308,18 +1199,15 @@ body.effects-ready .hero-section .hero-photo.smooth-reveal.is-revealed {
   .hero-names {
     gap: 7px;
   }
-
   body.effects-ready .hero-names .smooth-reveal.name-groom {
     transform: translate3d(54px, 0, 0) scale(0.98) !important;
   }
-
   body.effects-ready .hero-names .smooth-reveal.name-bride {
     transform: translate3d(-54px, 0, 0) scale(0.98) !important;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-
   *,
   *::before,
   *::after {
@@ -1328,7 +1216,6 @@ body.effects-ready .hero-section .hero-photo.smooth-reveal.is-revealed {
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
   }
-
   .effect-layer {
     display: none;
   }
@@ -1339,68 +1226,23 @@ body.effects-ready .hero-section .hero-photo.smooth-reveal.is-revealed {
     margin-left: 16px;
     margin-right: 16px;
   }
-
   .hero-section {
     padding-left: 18px;
     padding-right: 18px;
   }
-
   .hero-photo {
     width: 92%;
   }
-
   .photo-row {
     gap: 8px;
   }
-
   .signature {
     padding: 0 6px;
     font-size: 30px;
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-/* Sửa xung đột hiệu ứng cũ: section luôn hiển thị, chỉ từng chữ/ảnh tự reveal */
-body.effects-ready .paper-section,
-body.effects-ready .story-section,
-body.effects-ready .thanks-section,
-body.effects-ready .paper-section.is-visible,
-body.effects-ready .story-section.is-visible,
-body.effects-ready .thanks-section.is-visible {
-  opacity: 1 !important;
-  transform: none !important;
-}
-
-body.effects-ready .paper-section h2:not(.smooth-reveal),
-body.effects-ready .paper-section p:not(.smooth-reveal),
-body.effects-ready .paper-section img:not(.smooth-reveal),
-body.effects-ready .story-section *:not(.smooth-reveal),
-body.effects-ready .thanks-section *:not(.smooth-reveal) {
-  opacity: 1 !important;
-  transform: none !important;
-  filter: none !important;
-}
-
-body.effects-ready .smooth-reveal {
-  opacity: 0 !important;
-  filter: blur(2px) !important;
-}
-
-body.effects-ready .smooth-reveal.is-revealed {
-  opacity: 1 !important;
-  filter: blur(0) !important;
-}
-
-/* --- CSS CHO HỘP QUÀ & POP-UP MODAL --- */
+/* ==================== HỘP QUÀ & POP-UP ==================== */
 .gift-section {
   text-align: center;
 }
@@ -1412,7 +1254,6 @@ body.effects-ready .smooth-reveal.is-revealed {
   font-style: italic;
 }
 
-/* Nút bấm Gửi Mừng Cưới bo tròn giống thiết kế mẫu */
 .gift-button {
   display: inline-flex;
   align-items: center;
@@ -1421,11 +1262,9 @@ body.effects-ready .smooth-reveal.is-revealed {
   font-size: 16px;
   font-weight: 700;
   color: #4a5d4e;
-  /* Màu chữ xanh lá thẫm phù hợp theme */
   background-color: #ffffff;
   border: 2px solid #e0e0e0;
   border-radius: 999px;
-  /* Tạo bo tròn hoàn toàn */
   cursor: pointer;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
@@ -1441,7 +1280,6 @@ body.effects-ready .smooth-reveal.is-revealed {
   font-size: 18px;
 }
 
-/* Giao diện cấu trúc Pop-up ẩn/hiện */
 .gift-modal {
   position: fixed;
   inset: 0;
@@ -1454,7 +1292,6 @@ body.effects-ready .smooth-reveal.is-revealed {
   transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 
-/* Khi active sẽ hiển thị mượt mà */
 .gift-modal.is-active {
   opacity: 1;
   visibility: visible;
@@ -1486,7 +1323,6 @@ body.effects-ready .smooth-reveal.is-revealed {
   transform: scale(1);
 }
 
-/* Nút đóng Pop-up */
 .close-modal-btn {
   position: absolute;
   top: 10px;
@@ -1515,7 +1351,6 @@ body.effects-ready .smooth-reveal.is-revealed {
   color: #666;
 }
 
-/* Grid xếp hai thẻ QR cạnh nhau hoặc tự xuống dòng trên màn hình nhỏ */
 .qr-grid {
   display: flex;
   flex-direction: column;
@@ -1551,76 +1386,82 @@ body.effects-ready .smooth-reveal.is-revealed {
   color: #444;
 }
 
-/* ==========================================================================
-   BỔ SUNG CSS TỐI ƯU HIỂN THỊ TRÊN ĐIỆN THOẠI (CHỐNG TRÀN MÀN HÌNH)
-   ========================================================================== */
-
-/* Đảm bảo khung thiệp không bao giờ vượt quá chiều rộng màn hình */
-/* ==========================================================================
-   BỔ SUNG CSS TỐI ƯU HIỂN THỊ TRÊN ĐIỆN THOẠI (CHỐNG TRÀN MÀN HÌNH)
-   ========================================================================== */
-
-/* Đảm bảo khung thiệp không bao giờ vượt quá chiều rộng màn hình */
-.wedding-card {
-  width: 100% !important;
-  max-width: 430px;
-  margin: 0 auto;
-  box-sizing: border-box;
-  overflow-x: hidden;
-  /* Cắt bỏ phần thừa bị tràn ra ngoài */
-}
-
-/* Tự động co giãn ảnh family-grid trên các dòng điện thoại nhỏ */
-.family-grid img {
-  max-width: 100% !important;
-  width: clamp(100px, 30vw, 132px) !important;
-  height: auto !important;
-  aspect-ratio: 1 / 1 !important;
-}
-
-/* Sửa lỗi tràn ảnh phần Signature (Chữ ký & Ảnh 420px) */
-.signature-photo {
-  grid-template-columns: 1fr 2.5fr !important;
-  /* Thu nhỏ cột chữ ký, nhường chỗ cho ảnh */
-  min-height: auto !important;
-  max-height: 380px;
-}
-
-.signature-photo img {
-  height: 100% !important;
-  max-height: 380px;
-  object-fit: cover;
-}
-
-.signature {
-  font-size: clamp(20px, 6vw, 32px) !important;
-  /* Giảm size chữ ký khi xem trên mobile */
-}
-
-/* Thu nhỏ chiều cao ảnh hàng album để tránh kéo trang quá dài */
-.photo-row img {
-  height: clamp(90px, 25vw, 140px) !important;
-}
-
-.album-grid img {
-  height: clamp(100px, 28vw, 154px) !important;
-}
-
-.album-grid .wide {
-  height: clamp(280px, 80vw, 423px) !important;
-}
-
-.thanks-section img,
-.thanks-section {
-  height: clamp(280px, 80vw, 420px) !important;
-  min-height: auto !important;
-}
-
-/* SỬA LỖI HIỆU ỨNG DI CHUYỂN (TRANSLATE) ĐẨY CHỮ RA KHỎI MÀN HÌNH CHÂM LÀM TRÀN KHUNG */
+/* ==================== RESPONSIVE CHO ĐIỆN THOẠI ==================== */
 @media (max-width: 480px) {
+  /* Sửa lỗi tràn màn hình */
+  .wedding-card {
+    overflow-x: hidden;
+  }
+
+  /* ---- SỬA LỖI CHỮ BỊ ĐÈ TRÊN MÀN HÌNH NHỎ ---- */
+  .opening-names,
+  .opening-card h2 {
+    white-space: normal !important;
+    word-break: keep-all !important;
+    overflow-wrap: break-word !important;
+    font-size: clamp(18px, 6vw, 26px) !important;
+    line-height: 1.3 !important;
+  }
+
+  .hero-names .name-part {
+    font-size: clamp(18px, 6vw, 28px) !important;
+    white-space: normal !important;
+  }
+
+  .hero-names .name-amp {
+    font-size: clamp(14px, 4vw, 20px) !important;
+  }
+
+  /* ---- SỬA LỖI ẢNH BỊ CẮT MẤT PHẦN ĐẦU ---- */
+  .hero-photo {
+    object-fit: contain !important;
+    height: auto !important;
+    max-height: 70vh !important;
+  }
+
+  .signature-photo img {
+    height: auto !important;
+    max-height: 300px !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+  }
+
+  .thanks-section img {
+    height: auto !important;
+    max-height: 300px !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+  }
+
+  .album-grid img {
+    height: auto !important;
+    max-height: 200px !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+  }
+
+  .album-grid .wide {
+    height: auto !important;
+    max-height: 300px !important;
+    object-fit: contain !important;
+  }
+
+  .photo-row img {
+    height: auto !important;
+    max-height: 120px !important;
+    object-fit: cover !important;
+  }
+
+  .family-grid img {
+    width: clamp(80px, 25vw, 120px) !important;
+    height: auto !important;
+    aspect-ratio: 1/1 !important;
+    object-fit: cover !important;
+  }
+
+  /* ---- SỬA LỖI HIỆU ỨNG DI CHUYỂN TRÀN MÀN HÌNH ---- */
   body.effects-ready .hero-names .smooth-reveal.name-groom {
     transform: translate3d(20px, 0, 0) scale(0.98) !important;
-    /* Giảm khoảng cách lao vào từ 150px xuống 20px */
   }
 
   body.effects-ready .hero-names .smooth-reveal.name-bride {
@@ -1635,75 +1476,54 @@ body.effects-ready .smooth-reveal.is-revealed {
     transform: translate3d(15px, 10px, 0) scale(0.98) !important;
   }
 
-  /* Căn chỉnh lại form xác nhận và hộp quà cho vừa vặn */
+  /* ---- CĂN CHỈNH FORM & POPUP ---- */
   .rsvp-form,
   .modal-content {
     width: 92% !important;
     padding: 20px 15px !important;
   }
 
-  /* Xếp 2 mã QR dọc nhau trên màn hình điện thoại rất nhỏ để không bị ép kích thước */
   .qr-grid {
     gap: 15px !important;
   }
 
   .qr-image {
-    width: 140px !important;
+    width: 120px !important;
   }
-}
 
-/* ==========================================================================
-   CẬP NHẬT TỐI ƯU THỰC TẾ TRÊN ĐIỆN THOẠI (FIX MẤT CHỮ VÀ MẤT MẶT ẢNH)
-   ========================================================================== */
+  /* ---- SỬA LỖI CHỮ KÝ BỊ ĐÈ ---- */
+  .signature {
+    font-size: clamp(18px, 5vw, 28px) !important;
+    flex-direction: row !important;
+    gap: 10px !important;
+    padding: 10px !important;
+  }
 
-/* 1. SỬA LỖI MẤT KÝ TỰ / ÉP CHỮ QUÁ ĐÀ */
-.opening-names, 
-.opening-card h2, 
-.hero-names {
-  white-space: normal !important;      /* Cho phép tự động xuống dòng nếu màn hình quá bé để KHÔNG BỊ MẤT CHỮ */
-  text-overflow: clip !important;      /* Bỏ dấu 3 chấm gây mất ký tự */
-  overflow: visible !important;        /* Hiển thị toàn bộ chữ */
-  word-break: keep-all !important;     /* Không bẻ gãy từ ở giữa chữ */
-  text-align: center !important;
-  font-size: clamp(26px, 7.5vw, 36px) !important; /* Cỡ chữ vừa vặn nhất */
-}
+  .signature-photo {
+    grid-template-columns: 1fr !important;
+    min-height: auto !important;
+  }
 
-/* 2. SỬA LỖI ẢNH BỊ MẤT PHẦN TRÊN (CHE MẤT MẶT) */
-.hero-photo,
-.signature-photo img,
-.thanks-section img,
-.album-grid img,
-.family-grid img {
-  height: auto !important;             /* Bỏ ép chiều cao cố định để ảnh giữ nguyên tỉ lệ gốc */
-  max-height: 75vh !important;         /* Giới hạn ảnh không quá dài vượt màn hình */
-  object-fit: contain !important;      /* Ép ảnh thu nhỏ trọn vẹn vào khung, KHÔNG BỊ CẮT BẤT CỨ PHẦN NÀO */
-  object-position: center center !important; /* Luôn giữ trọng tâm ảnh ở giữa */
-}
+  /* ---- MÀN MỞ THIỆP ---- */
+  .opening-card {
+    width: 92% !important;
+    max-width: 320px !important;
+    padding: 20px 12px !important;
+  }
 
-/* Sửa riêng phần khung Chữ ký & Ảnh cưới để không ép ảnh */
-.signature-photo {
-  display: flex !important;
-  flex-direction: column-reverse !important; /* Đẩy chữ ký xuống dưới ảnh trên điện thoại để ảnh có không gian rộng nhất */
-  background: var(--cream) !important;
-}
+  .opening-envelope {
+    width: 100px;
+    height: 70px;
+  }
 
-.signature-photo img {
-  width: 100% !important;
-  height: auto !important;
-  max-height: 400px !important;
-  object-fit: cover !important;        /* Giữ cover cho phần này nhưng chỉnh vị trí lấy nét */
-  object-position: center 15% !important; /* Tập trung lấy nét vào phần khuôn mặt (khoảng 15% từ trên xuống) */
-}
+  .envelope-flap {
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 36px solid #f7e5cf;
+  }
 
-.signature {
-  padding: 15px 0 !important;
-  flex-direction: row !important;      /* Chuyển chữ ký thành hàng ngang cho dễ nhìn trên điện thoại */
-  gap: 15px !important;
-}
-
-/* Đảm bảo toàn bộ card mở thiệp co giãn thoải mái */
-.opening-card {
-  width: 90% !important;
-  max-width: 340px !important;
-  padding: 24px 16px !important;
+  .envelope-body {
+    inset: 22px 0 0;
+    font-size: 26px;
+  }
 }
