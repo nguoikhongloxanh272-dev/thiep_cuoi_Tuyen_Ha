@@ -27,19 +27,10 @@ function updateCountdown() {
 updateCountdown();
 setInterval(updateCountdown, 1000);
 
-const rsvpForm = document.getElementById("rsvpForm");
-const formMessage = document.getElementById("formMessage");
-
-rsvpForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  const formData = new FormData(rsvpForm);
-  const guestName = formData.get("guestName").trim();
-  const attendance = formData.get("attendance");
-
-  formMessage.textContent = `Cảm ơn ${guestName}! Phản hồi của bạn: ${attendance}.`;
-  rsvpForm.reset();
-});
+// Lưu ý: việc gửi dữ liệu RSVP (xác nhận tham dự) đã được xử lý bằng đoạn
+// <script> nằm trực tiếp trong index.html (đoạn có gọi Google Apps Script để
+// lưu vào Google Sheet). Không gắn thêm sự kiện submit ở đây nữa để tránh
+// việc 2 đoạn script cùng xử lý 1 form làm đè mất thông báo lẫn nhau.
 
 const musicButton = document.querySelector(".music-button");
 const weddingMusic = document.getElementById("weddingMusic");
@@ -276,3 +267,13 @@ if (openGiftBtn && giftModal) {
   closeGiftBtn.addEventListener('click', () => toggleGiftModal(false));
   modalOverlay.addEventListener('click', () => toggleGiftModal(false));
 }
+
+
+
+
+
+
+
+
+
+
