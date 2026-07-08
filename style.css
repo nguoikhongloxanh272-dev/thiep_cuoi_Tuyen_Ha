@@ -1226,6 +1226,17 @@ body.effects-ready .hero-names .smooth-reveal.is-revealed {
   transform: translate3d(0, 0, 0) scale(1) !important;
 }
 
+/* QUAN TRỌNG: các rule bên dưới (kể cả trong media query cho điện thoại) quy định
+   vị trí LỆCH ban đầu của "Đình Tuyến" / "Lệ Hà" / "&" để chuẩn bị trượt vào.
+   Rule dưới đây có độ ưu tiên (specificity) CAO HƠN tất cả các rule lệch đó
+   (5 lớp thay vì 4), nên LUÔN thắng và ép chữ về đúng vị trí giữa, không bị kẹt
+   lệch/chồng lên nhau sau khi hiệu ứng đã chạy xong, bất kể đang ở màn hình nào. */
+body.effects-ready .hero-names .smooth-reveal.is-revealed.name-groom,
+body.effects-ready .hero-names .smooth-reveal.is-revealed.name-bride,
+body.effects-ready .hero-names .smooth-reveal.is-revealed.name-amp {
+  transform: translate3d(0, 0, 0) scale(1) !important;
+}
+
 body.effects-ready .hero-section .hero-photo.smooth-reveal.from-scale {
   transform: translate3d(0, 42px, 0) scale(0.86) !important;
 }
