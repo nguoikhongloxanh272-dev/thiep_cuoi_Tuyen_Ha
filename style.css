@@ -173,22 +173,22 @@ h1 span {
 }
 
 .family-grid img {
-  width: 100% !important;
-  max-width: 120px !important;
-  aspect-ratio: 3 / 4 !important;
-  /* Hoặc 1 / 1 nếu bạn muốn khung hình tròn/hình vuông */
+  width: 112px !important;
+  max-width: 100% !important;
+  height: 112px !important;
+  aspect-ratio: 1 / 1 !important;
   object-fit: cover !important;
-  /* Ép ảnh lấp đầy khung, tự động cắt phần thừa không lo bị méo */
   object-position: center !important;
-  margin: 16px auto !important;
-  border-radius: 8px !important;
-  /* Đổi thành bo góc nhẹ cho ảnh dáng dọc đứng cân đối */
+  margin: 12px auto 8px !important;
+  border-radius: 50% !important;
 }
 
 .couple-section h3 {
   margin: 0;
   color: var(--wine);
-  font-size: 23px;
+  font-size: clamp(19px, 5.4vw, 23px);
+  line-height: 1.12;
+  white-space: nowrap;
 }
 
 .countdown {
@@ -1452,6 +1452,52 @@ body.effects-ready .hero-section .hero-photo.smooth-reveal.is-revealed {
     overflow-x: hidden;
   }
 
+  .couple-section.paper-section {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+    padding: 22px 6px 20px !important;
+  }
+
+  .family-grid {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    justify-content: center !important;
+    align-items: start !important;
+    width: min(100%, 296px) !important;
+    margin: 0 auto !important;
+    gap: clamp(18px, 5vw, 28px) !important;
+  }
+
+  .family-grid article {
+    display: flex !important;
+    flex: 0 0 clamp(120px, 36vw, 134px) !important;
+    min-width: 0 !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .family-grid h2 {
+    margin-bottom: 4px !important;
+    font-size: 16px !important;
+    line-height: 1 !important;
+  }
+
+  .family-grid p {
+    width: 100% !important;
+    font-size: 11.5px !important;
+    line-height: 1.2 !important;
+  }
+
+  .couple-section h3 {
+    width: max-content !important;
+    max-width: 142px !important;
+    font-size: clamp(16px, 4.4vw, 18px) !important;
+    line-height: 1.08 !important;
+    white-space: nowrap !important;
+    text-align: center !important;
+  }
+
   /* ---- SỬA LỖI CHỮ BỊ ĐÈ TRÊN MÀN HÌNH NHỎ ---- */
   .opening-names,
   .opening-card h2 {
@@ -1486,9 +1532,10 @@ body.effects-ready .hero-section .hero-photo.smooth-reveal.is-revealed {
   }
 
   .thanks-section img {
-    height: auto !important;
-    max-height: 300px !important;
-    object-fit: contain !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-height: none !important;
+    object-fit: cover !important;
     object-position: center center !important;
   }
 
@@ -1513,10 +1560,32 @@ body.effects-ready .hero-section .hero-photo.smooth-reveal.is-revealed {
   }
 
   .family-grid img {
-    width: clamp(80px, 25vw, 120px) !important;
-    height: auto !important;
-    aspect-ratio: 1/1 !important;
+    width: clamp(92px, 26vw, 100px) !important;
+    height: clamp(92px, 26vw, 100px) !important;
+    aspect-ratio: 1 / 1 !important;
     object-fit: cover !important;
+    border-radius: 50% !important;
+    margin: 18px auto 7px !important;
+  }
+
+  .countdown {
+    grid-template-columns: repeat(4, clamp(54px, 16vw, 62px)) !important;
+    justify-content: center !important;
+    gap: clamp(6px, 2vw, 10px) !important;
+    margin-top: 18px !important;
+    max-width: none !important;
+  }
+
+  .thanks-section {
+    height: clamp(430px, 122vw, 520px) !important;
+    min-height: 0 !important;
+  }
+
+  body.effects-ready .family-grid article.smooth-reveal,
+  body.effects-ready .family-grid img.smooth-reveal,
+  body.effects-ready .family-grid h3.smooth-reveal,
+  body.effects-ready .family-grid p.smooth-reveal {
+    transform: none !important;
   }
 
   /* ---- SỬA LỖI HIỆU ỨNG DI CHUYỂN TRÀN MÀN HÌNH ---- */
