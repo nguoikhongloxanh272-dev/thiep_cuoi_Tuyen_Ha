@@ -12,11 +12,18 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 body {
   margin: 0;
+  overflow-x: hidden;
+  width: 100%;
   background: #dedede;
   color: var(--ink);
-  font-family: "Times New Roman", Georgia, serif;
+  font-family: "Playfair Display", Georgia, serif;
 }
 
 img {
@@ -37,7 +44,11 @@ img {
   position: fixed;
   z-index: 20;
   top: 16px;
-  right: calc(50% - 205px);
+  /* Trên máy tính, thiệp rộng tối đa 430px và nằm giữa màn hình nên phải trừ đi
+     một nửa chiều rộng đó. Trên điện thoại (màn hình hẹp hơn 430px), thiệp chiếm
+     toàn bộ chiều ngang nên nút chỉ cần cách mép phải 16px. Dùng max() để nút
+     luôn nằm trong màn hình, không bị đẩy ra ngoài gây tràn ngang. */
+  right: max(16px, calc(50% - 199px));
   width: 32px;
   height: 32px;
   border: 2px solid #f6efe8;
@@ -67,8 +78,8 @@ h1,
 .signature,
 .quote,
 .thanks-section p {
-  font-family: "Brush Script MT", "Segoe Script", cursive;
-  font-weight: 400;
+  font-family: "Dancing Script", "Segoe Script", cursive;
+  font-weight: 600;
 }
 
 .eyebrow {
@@ -521,9 +532,9 @@ h1 span {
   margin: 22px 18px 18px 0;
   color: var(--wine);
   text-align: right;
-  font-family: "Brush Script MT", "Segoe Script", cursive;
+  font-family: "Dancing Script", "Segoe Script", cursive;
   font-size: 34px;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1;
 }
 
@@ -531,7 +542,7 @@ h1 span {
   margin: 0 0 20px;
   color: var(--wine);
   text-align: center;
-  font-family: "Brush Script MT", "Segoe Script", cursive;
+  font-family: "Dancing Script", "Segoe Script", cursive;
   font-size: 18px;
   line-height: 1.45;
 }
@@ -882,9 +893,9 @@ body.invitation-locked {
 
 .opening-card h2 {
   margin: 10px 0 8px;
-  font-family: "Brush Script MT", "Segoe Script", cursive;
+  font-family: "Dancing Script", "Segoe Script", cursive;
   font-size: 38px;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.2;
 }
 
@@ -1375,7 +1386,7 @@ body.effects-ready .hero-section .hero-photo.smooth-reveal.is-revealed {
 }
 
 .modal-content h3 {
-  font-family: "Brush Script MT", "Segoe Script", cursive;
+  font-family: "Dancing Script", "Segoe Script", cursive;
   font-size: 28px;
   color: var(--wine);
   margin: 0 0 4px;
