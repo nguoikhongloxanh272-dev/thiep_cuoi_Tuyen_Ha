@@ -1482,10 +1482,11 @@ body.effects-ready .hero-section .hero-photo.smooth-reveal.is-revealed {
   }
 
   .album-grid img {
+    width: 100% !important;
     height: auto !important;
-    max-height: 200px !important;
-    object-fit: contain !important;
-    object-position: center center !important;
+    aspect-ratio: 3 / 4 !important;
+    object-fit: cover !important;
+    object-position: center 20% !important;
   }
 
   .album-grid .wide {
